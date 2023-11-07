@@ -8,6 +8,9 @@ $theme-light-color: #67766f // light grey
 $template-color: #e67414 // orange
 $border-color: #ccc
 $menu-text-color: #fff
+$menu-bg-color: #212529
+$dark-color: #000
+$template-color: brown
 
 // FONT variables
 $basic-font: 'Lato', sans-serif
@@ -50,24 +53,155 @@ body
   color: $text-color
   background: $bg-color
   font-size: $base-font-size
+  //overflow-x: initial /* or unset */
+
 section
   padding: 100px 0
   border-bottom: 1px solid $border-color
 header
   border-bottom: 1px solid $border-color
+h1, h2, h3
+  padding-top: 5px
+  padding-bottom: 5px
 h1, h2
   letter-spacing: 2px
-  padding-bottom: 50px
-
+  margin-bottom: 50px
+h2
+  padding-left: 10px
+  border-left: 10px solid $text-color
+  //padding-left: 35px
+  //background-image: url("../images/logo_h48.png")
+  //background-repeat: no-repeat
+  //background-size: auto 32px
+  //background-position: left center
+#oferta
+  h3
+    padding-left: 10px
+    border-left: 5px solid $text-color
 // HEADER
+.bg-kozuchy
+  height: 120px
+  background-image: url("../images/naglowek_h200px.jpg")
+  background-size: auto 120px
+  background-position: bottom
+  padding-bottom: 20px !important
+  +transition(.5s)
+@media (min-width: 768px)
+  .fixed-Menu
+    height: 65px
+@media (max-width: 767px)
+  .bg-kozuchy
+    height: 65px
+    &.expanded-Menu
+      height: 120px
+#mainmenu-ScrollSpy
+  .navbar-brand
+    height: 0px
+    width: 0px
+  .navbar-toggler
+    padding: 2px 8px
+    color: darken($menu-text-color,30%)
+    box-shadow: 0 0 5px darken($menu-text-color,50%)
+    +transition(.4s)
+    &:hover
+      color: $menu-text-color
+      box-shadow: 0 0 5px $menu-text-color
+  .nav-item
+    padding-left: 5px
+    padding-right: 5px
+  .nav-link
+    color: $menu-text-color
+    background: none
+    &:hover
+      box-shadow: 0 0 5px darken($menu-text-color,20%)
+    &.active
+      background: $menu-bg-color
+#logo
+  position: fixed
+  z-index: 1040
+  top: 0
+  left: 20px
+  img
+    +transition(.6s)
+    height: 200px
+    width: auto
+  &.fixed-Logo
+    img
+      height: 100px
+@media (max-width: 767px)
+  #logo
+    img
+      height: 100px
+@media (max-width: 575px)
+  #logo.expanded-Logo
+    img
+      height: 50px
 .jumbotron
   height: 100vh
-  .container
+.slider-container
+  @extend %w-h-100
+  position: relative
+  .slider-content
     position: relative
-    top: 50%
-    +translate(0, -50%)
+    top: 0
+    @extend %w-h-100
+  .carousel
+    @extend %w-h-100
+    .carousel-inner
+      @extend %w-h-100
+      .carousel-item
+        @extend %w-h-100
+        overflow: hidden
+        img
+          position: relative
+          object-fit: cover
+          min-width: 100%
+          min-height: 100%
+          top: 55%
+          right: 0%
+          +translate(0, -50%)
+          object-position: 50% 50%
+@media (max-width: 767px)
+  .slider-container
+    .carousel
+      .carousel-inner
+        .carousel-item
+          img
+            object-position: 70% 50%
+@media (min-width: 768px) and (max-width: 991px)
+  .slider-container
+    .carousel
+      .carousel-inner
+        .carousel-item
+          img
+            object-position: 60% 50%
+
+.slider-overlay
+  z-index: 1000
+  position: absolute
+  top: 0
+  left: 0
+  @extend %w-h-100
+  background: rgba(0,0,0,0.5)
+  //background: rgba(0,0,0,0.5) black
+  //background: rgba(111, 78, 55,0.5) coffee
+  //background: rgba(92, 64, 51,0.5) dark brown
+.container.naglowek-Tekst
+  z-index: 1000
+  color: white
+  position: absolute
+  top: 50%
+  left: 50%
+  +translate(-50%, -50%)
+  text-shadow: 3px 3px 6px black
+  .btn
+    text-shadow: none
 
 // OFERTA
+#oferty-Filtr
+  .opcja
+    &:hover
+      box-shadow: 3px 3px 8px rgba(black,.4)
 .gallery-block.grid-gallery
   h3
     margin-bottom: 20px
@@ -94,7 +228,7 @@ h1, h2
     .item
       &:hover
         transform: scale(1.05)
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3) !important
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5) !important
 
 // KONTAKT
 .kontakt-module
@@ -108,20 +242,29 @@ h1, h2
 
 // FOOTER
 #footer
-  background-color: $theme-dark-color
+  background-image: url("../images/naglowek_h200px_180deg.jpg")
+  background-size: auto 120px
+  background-position: top
   color: $bg-color
+  .container
+    padding-top: 10px !important
 
 // TO-TOP
 #totop
   width: 3em
   height: 3em
   position: fixed
-  bottom: 50px
-  right: 50px
+  bottom: 25px
+  right: 25px
   svg
     background-color: $bg-color
+    color: $dark-color
     border-radius: 50%
-    box-shadow: 0 0 10px $border-color
+    +transition(.4s)
+  &:hover
+    svg
+      background-color: darken($bg-color,20%)
+      box-shadow: 0 0 15px $bg-color
 
 // COOKIEINFO
 .cookieinfo

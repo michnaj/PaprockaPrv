@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
+.slider-container, .slider-container .slider-content, .slider-container .carousel, .slider-container .carousel .carousel-inner, .slider-container .carousel .carousel-inner .carousel-item, .slider-overlay {
+  width: 100%;
+  height: 100%; }
+
 * {
   box-sizing: border-box; }
 
@@ -17,18 +21,143 @@ section {
 header {
   border-bottom: 1px solid #ccc; }
 
+h1, h2, h3 {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
 h1, h2 {
   letter-spacing: 2px;
-  padding-bottom: 50px; }
+  margin-bottom: 50px; }
+
+h2 {
+  padding-left: 10px;
+  border-left: 10px solid #37443b; }
+
+#oferta h3 {
+  padding-left: 10px;
+  border-left: 5px solid #37443b; }
+
+.bg-kozuchy {
+  height: 120px;
+  background-image: url("../images/naglowek_h200px.jpg");
+  background-size: auto 120px;
+  background-position: bottom;
+  padding-bottom: 20px !important;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s; }
+
+@media (min-width: 768px) {
+  .fixed-Menu {
+    height: 65px; } }
+
+@media (max-width: 767px) {
+  .bg-kozuchy {
+    height: 65px; }
+    .bg-kozuchy.expanded-Menu {
+      height: 120px; } }
+
+#mainmenu-ScrollSpy .navbar-brand {
+  height: 0px;
+  width: 0px; }
+
+#mainmenu-ScrollSpy .navbar-toggler {
+  padding: 2px 8px;
+  color: #b3b2b2;
+  box-shadow: 0 0 5px #807f7f;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s; }
+  #mainmenu-ScrollSpy .navbar-toggler:hover {
+    color: #fff;
+    box-shadow: 0 0 5px #fff; }
+
+#mainmenu-ScrollSpy .nav-item {
+  padding-left: 5px;
+  padding-right: 5px; }
+
+#mainmenu-ScrollSpy .nav-link {
+  color: #fff;
+  background: none; }
+  #mainmenu-ScrollSpy .nav-link:hover {
+    box-shadow: 0 0 5px #cccccc; }
+  #mainmenu-ScrollSpy .nav-link.active {
+    background: #212529; }
+
+#logo {
+  position: fixed;
+  z-index: 1040;
+  top: 0;
+  left: 20px; }
+  #logo img {
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    transition: 0.6s;
+    height: 200px;
+    width: auto; }
+  #logo.fixed-Logo img {
+    height: 100px; }
+
+@media (max-width: 767px) {
+  #logo img {
+    height: 100px; } }
+
+@media (max-width: 575px) {
+  #logo.expanded-Logo img {
+    height: 50px; } }
 
 .jumbotron {
   height: 100vh; }
-  .jumbotron .container {
+
+.slider-container {
+  position: relative; }
+  .slider-container .slider-content {
     position: relative;
-    top: 50%;
-    -ms-transform: translate(0, -50%);
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%); }
+    top: 0; }
+  .slider-container .carousel .carousel-inner .carousel-item {
+    overflow: hidden; }
+    .slider-container .carousel .carousel-inner .carousel-item img {
+      position: relative;
+      object-fit: cover;
+      min-width: 100%;
+      min-height: 100%;
+      top: 55%;
+      right: 0%;
+      -ms-transform: translate(0, -50%);
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      object-position: 50% 50%; }
+
+@media (max-width: 767px) {
+  .slider-container .carousel .carousel-inner .carousel-item img {
+    object-position: 70% 50%; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .slider-container .carousel .carousel-inner .carousel-item img {
+    object-position: 60% 50%; } }
+
+.slider-overlay {
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); }
+
+.container.naglowek-Tekst {
+  z-index: 1000;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-shadow: 3px 3px 6px black; }
+  .container.naglowek-Tekst .btn {
+    text-shadow: none; }
+
+#oferty-Filtr .opcja:hover {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4); }
 
 .gallery-block.grid-gallery h3 {
   margin-bottom: 20px; }
@@ -51,7 +180,7 @@ h1, h2 {
 @media (min-width: 576px) {
   .gallery-block.grid-gallery .item:hover {
     transform: scale(1.05);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3) !important; } }
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5) !important; } }
 
 .kontakt-module p {
   position: relative;
@@ -63,19 +192,29 @@ h1, h2 {
   top: calc(50% - 0.75em); }
 
 #footer {
-  background-color: #2e3e34;
+  background-image: url("../images/naglowek_h200px_180deg.jpg");
+  background-size: auto 120px;
+  background-position: top;
   color: #fff; }
+  #footer .container {
+    padding-top: 10px !important; }
 
 #totop {
   width: 3em;
   height: 3em;
   position: fixed;
-  bottom: 50px;
-  right: 50px; }
+  bottom: 25px;
+  right: 25px; }
   #totop svg {
     background-color: #fff;
+    color: #000;
     border-radius: 50%;
-    box-shadow: 0 0 10px #ccc; }
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    transition: 0.4s; }
+  #totop:hover svg {
+    background-color: #cccccc;
+    box-shadow: 0 0 15px #fff; }
 
 .cookieinfo a,
 .cookieinfo .link {
@@ -86,7 +225,7 @@ h1, h2 {
   .cookieinfo a:hover,
   .cookieinfo .link:hover {
     cursor: pointer;
-    color: #e67414 !important; }
+    color: brown !important; }
 
 .cookieinfo .cookieinfo-close {
   color: #fff !important;
