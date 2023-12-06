@@ -50,58 +50,79 @@
       </nav>
 
       <div class="jumbotron jumbotron-fluid">
-        <div class="slider-container">
           <div class="slider-content">
-            <div id="karuzela-Naglowek" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="slider-container">
+              <!-- TEMP -->
+              <div id="Bgk-Chooser">
+                <p>Wybrane tło: <span id="Wybrane-Tlo" style="margin-left: 15px; font-weight: bold; padding: 10px; border: 1px solid white; font-size: 1.4em;">1</span></p>
+                <p style="margin-top: 15px; font-size: 1.4em; width: 350px; text-align: center;">
+                  <a class="btn btn-secondary tlo-select" href="#" data-tlo="1">1</a>
+                  <a class="btn btn-secondary tlo-select" href="#" data-tlo="2">2</a>
+                  <a class="btn btn-secondary tlo-select" href="#" data-tlo="3">3</a>
+                  <a class="btn btn-secondary tlo-select" href="#" data-tlo="4">4</a>
+                  <a class="btn btn-secondary tlo-select" href="#" data-tlo="5">5</a>
+                  <a class="btn btn-secondary tlo-select" href="#" data-tlo="6">6</a>
+                  <a class="btn btn-secondary tlo-select" href="#" data-tlo="7">7</a>
+                  <a class="btn btn-secondary tlo-select" href="#" data-tlo="8">8</a>
+                  <a class="btn btn-secondary tlo-select" href="#" data-tlo="9">9</a>
+                  <a class="btn btn-secondary tlo-select" href="#" data-tlo="10">10</a>
+                  <a class="btn btn-secondary tlo-select" href="#" data-tlo="11">11</a>
+                  <a class="btn btn-secondary tlo-select" href="#" data-tlo="12">12</a>
+                </p>
+              </div>
+              <!-- KONIEC TEMP -->
+            <div id="karuzela-Naglowek" class="carousel slide carousel-fade tlo tlo-1" data-bs-ride="carousel">
+              <!--<div class="slider-overlay">&nbsp;</div>-->
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="./images/naglowek/NagRight_Dark95_01.jpg" class="d-block w-100" alt="">
-                </div>
-                <!--<div class="carousel-item">
-                  <img src="./images/naglowek/NagRight_Dark95_02.jpg" class="d-block w-100" alt="">
-                </div>-->
-                <!--<div class="carousel-item">
-                  <img src="./images/naglowek/NagRight_Dark95_03.jpg" class="d-block w-100" alt="">
-                </div>-->
-                <div class="carousel-item">
-                  <img src="./images/naglowek/NagRight_Dark95_04.jpg" class="d-block w-100" alt="">
+                  <img src="./images/naglowek/NagRight_Transparent_01.png" class="d-block w-100" alt="">
                 </div>
                 <div class="carousel-item">
-                  <img src="./images/naglowek/NagRight_Dark95_05.jpg" class="d-block w-100" alt="">
+                  <img src="./images/naglowek/NagRight_Transparent_02.png" class="d-block w-100" alt="">
                 </div>
                 <div class="carousel-item">
-                  <img src="./images/naglowek/NagRight_Dark95_06.jpg" class="d-block w-100" alt="">
+                  <img src="./images/naglowek/NagRight_Transparent_03.png" class="d-block w-100" alt="">
                 </div>
                 <div class="carousel-item">
-                  <img src="./images/naglowek/NagRight_Dark95_07.jpg" class="d-block w-100" alt="">
+                  <img src="./images/naglowek/NagRight_Transparent_04.png" class="d-block w-100" alt="">
                 </div>
                 <div class="carousel-item">
-                  <img src="./images/naglowek/NagRight_Dark95_08.jpg" class="d-block w-100" alt="">
+                  <img src="./images/naglowek/NagRight_Transparent_05.png" class="d-block w-100" alt="">
                 </div>
                 <div class="carousel-item">
-                  <img src="./images/naglowek/NagRight_Dark95_09.jpg" class="d-block w-100" alt="">
+                  <img src="./images/naglowek/NagRight_Transparent_06.png" class="d-block w-100" alt="">
                 </div>
                 <div class="carousel-item">
-                  <img src="./images/naglowek/NagRight_Dark95_10.jpg" class="d-block w-100" alt="">
+                  <img src="./images/naglowek/NagRight_Transparent_07.png" class="d-block w-100" alt="">
                 </div>
                 <div class="carousel-item">
-                  <img src="./images/naglowek/NagRight_Dark95_11.jpg" class="d-block w-100" alt="">
+                  <img src="./images/naglowek/NagRight_Transparent_08.png" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/naglowek/NagRight_Transparent_09.png" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/naglowek/NagRight_Transparent_10.png" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/naglowek/NagRight_Transparent_11.png" class="d-block w-100" alt="">
                 </div>
               </div>
             </div>
           </div>
-          <!--<div class="slider-overlay">&nbsp;</div>-->
-          <div class="container naglowek-Tekst">
+          <div id="Wstep" class="container naglowek-Tekst">
             <h1 class="display-3 mb-5">PPHU Futrzarstwo<br />i&nbsp;Skóra -&nbsp;Kurów</h1>
             <p class="lead">Serdecznie witamy na naszej stronie internetowej.</p>
             <p class="lead">Zapraszamy do zapoznania się z&nbsp;historią firmy, ofertą i&nbsp;asortymentem.</p>
             <p><em>Maria i&nbsp;Henryk Paproccy</em></p>
-            <a class="btn btn-outline-light btn-lg mt-5 smoothScroll" href="#o-firmie" role="button">Przejdź dalej
+            <p>
+            <a class="btn btn-dark btn-lg mt-5 smoothScroll" href="#o-firmie" role="button">Przejdź dalej
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
                 <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
               </svg>
             </a>
+            </p>
           </div>
         </div>
       </div>

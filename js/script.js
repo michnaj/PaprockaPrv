@@ -64,4 +64,20 @@ $(function() {
       bootstrap.ScrollSpy.getInstance(dataSpyEl).refresh();
     });
   });
+
+  // TEMP ZMIENIACZ TLA
+  $('a.tlo-select').click(function(event) {
+    let Karuzela = document.getElementById('karuzela-Naglowek');
+    let PoleTxt = document.getElementById('Wybrane-Tlo');
+    let Wstep = document.getElementById('Wstep');
+
+    for(i=1; i<26; i++) {
+      Karuzela.classList.remove('tlo-'+i);
+    }
+    let number = $(this).attr('data-tlo');
+    Karuzela.classList.add('tlo-' + number);
+    $(PoleTxt).html(number);
+    if ((number > 1) && (number <= 5)) Wstep.classList.remove('tempBlack');
+    if (number >= 6) Wstep.classList.add('tempBlack');
+  });
 });

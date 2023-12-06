@@ -138,16 +138,44 @@ h2
       height: 50px
 .jumbotron
   height: 100vh
-.slider-container
+  .tlo
+    background-size: cover
+    background-position: center bottom
+  .tlo-1
+    background-image: url("../images/naglowek/bg01.jpg")
+  .tlo-2
+    background-image: url("../images/naglowek/bg02.jpg")
+  .tlo-3
+    background-image: url("../images/naglowek/bg03.jpg")
+  .tlo-4
+    background-image: url("../images/naglowek/bg04.jpg")
+  .tlo-5
+    background-image: url("../images/naglowek/bg05.jpg")
+  .tlo-6
+    background-image: url("../images/naglowek/bg06.jpg")
+  .tlo-7
+    background-image: url("../images/naglowek/bg07.jpg")
+  .tlo-8
+    background-image: url("../images/naglowek/bg08.jpg")
+  .tlo-9
+    background-image: url("../images/naglowek/bg09.jpg")
+  .tlo-10
+    background-image: url("../images/naglowek/bg10.jpg")
+  .tlo-11
+    background-image: url("../images/naglowek/bg11.jpg")
+  .tlo-12
+    background-image: url("../images/naglowek/bg12.jpg")
+.slider-content
   @extend %w-h-100
   position: relative
-  .slider-content
+  .slider-container
     position: relative
     top: 0
     @extend %w-h-100
   .carousel
     @extend %w-h-100
     .carousel-inner
+      //z-index: 1000
       @extend %w-h-100
       .carousel-item
         @extend %w-h-100
@@ -186,9 +214,22 @@ h2
   //background: rgba(0,0,0,0.5) black
   //background: rgba(111, 78, 55,0.5) coffee
   //background: rgba(92, 64, 51,0.5) dark brown
+// START TEMP
+#Bgk-Chooser
+  background-color: rgba(0,0,0,0.7)
+  color: white
+  padding: 20px
+  position: absolute
+  left: 0
+  bottom: 0
+  z-index: 1050
+  text-align: center
+  .btn
+    margin: 3px 2px
+// KONIEC TEMP
 .container.naglowek-Tekst
   z-index: 1000
-  color: white
+  color: white // USTALIC NA PODSTAWIE WYBRANEGO TLA
   position: absolute
   top: 50%
   left: 50%
@@ -196,7 +237,11 @@ h2
   text-shadow: 3px 3px 6px black
   .btn
     text-shadow: none
-
+// USUNAC PO WYBRANIU TLA
+.container.naglowek-Tekst.tempBlack
+  color: black
+  text-shadow: 3px 3px 6px grey
+// KONIEC USUNIECIA
 // OFERTA
 #oferty-Filtr
   .opcja
